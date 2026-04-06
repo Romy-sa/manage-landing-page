@@ -74,5 +74,13 @@
     "to-regex-range": "^5.0.1",
     "ts-interface-checker": "^0.1.13",
     "util-deprecate": "^1.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Romy-sa/manage-landing-page.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Romy-sa/manage-landing-page/issues"
+  },
+  "homepage": "https://github.com/Romy-sa/manage-landing-page#readme"
 }

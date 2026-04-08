@@ -8,41 +8,11 @@ body {
     background-size: 800px;
     background-position: 90% -25%;
     color: hsl(233, 12%, 13%);
-    overflow-x: hidden;
 }
 
 #cta {
     background-image: url('../img/bg-simplify-section-desktop.svg');
     background-repeat: no-repeat;
-}
-
-.testmonials {
-    margin-top: 7rem;
-    width: 100%;
-    overflow-x: auto;
-    padding-top: 2rem;
-    scroll-marker-group: after;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-}
-
-.testmonials::-webkit-scrollbar {
-    display: none;
-}
-
-.testmonials::scroll-marker-group {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-}
-
-.card {
-    flex: 0 0 20rem;
-    scroll-snap-align: center;
-}
-
-.card::scroll-marker:target-current {
-    background-color: theme('colors.brightRed');
 }
 
 @media(max-width:576px) {
@@ -57,23 +27,49 @@ body {
 }
 
 @media(max-width: 787px) {
+    .testmonials {
+        overflow-y: visible;
+        width: 100%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scroll-marker-group: after;
+    }
+
+    .testmonials::-webkit-scrollbar {
+        display: none;
+    }
+
     .card {
-        flex: 0 0 100%
+        margin-top: 2rem;
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+    }
+
+    .testmonials::scroll-marker-group {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 3rem;
     }
 
     .card::scroll-marker {
         content: '';
-        background-color: theme('colors.darkGrayishBlue');
-        height: 0.5rem;
         width: 0.5rem;
+        height: 0.5rem;
+        background-color: theme('colors.darkGrayishBlue');
         border-radius: 50%;
+    }
+
+    .card::scroll-marker:target-current {
+        background-color: theme('colors.brightRedLight');
     }
 }
 
 .hamburger {
     cursor: pointer;
     right: 24px;
-    background-color: white;
+    background-color: transparent;
     height: 24px;
     width: 24px;
     position: relative;

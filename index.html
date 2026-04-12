@@ -21,7 +21,7 @@
         <a href="#" class="text-white hidden bg-brightRed hover:bg-brightRedLight p-3 pt-2 px-6 rounded-full md:flex">Get Started</a>
 
         <!-- hamburger button -->
-        <button id="menu-btn" aria-controls="menu" class="hamburger  block md:hidden focus:outline-none">
+        <button id="menu-btn" aria-controls="menu" aria-expanded="false" class="hamburger  block md:hidden focus:outline-none">
           <span class="hamburger-top"></span>
           <span class="hamburger-middle"></span>
           <span class="hamburger-bottom"></span>
@@ -29,7 +29,7 @@
       </div>
 
       <!-- Mobile menu -->
-      <div id="menu" aria-expanded="false" class="absolute w-96 top-20 right-12 bg-white py-4 text-black font-bold hidden flex-col space-y-6 items-center shadow-md md:hidden">
+      <div id="menu" class="absolute w-[90%] top-20 left-1/2 -translate-x-1/2 bg-white py-4 text-black font-bold hidden flex-col space-y-6 items-center shadow-md md:hidden">
         <a href="#">Product</a>
         <a href="#">About Us</a>
         <a href="#">Careers</a>
@@ -175,7 +175,7 @@
         </div>
 
         <!-- Links -->
-         <div class="flex w-96 justify-around md:flex-1">
+         <div class="flex w-full justify-around md:flex-1">
           <div class="flex flex-col gap-4 text-white">
             <a class="hover:text-brightRed" href="#">Home</a>
             <a class="hover:text-brightRed" href="#">Pricing</a>
@@ -191,11 +191,12 @@
          </div>
 
         <!-- Input -->
-        <div class="flex order-first w-full flex-col gap-16 md:order-last md:w-auto">
-            <form  class="flex flex-1 gap-4">
-              <input type="email" class="rounded-full p-2 px-4 w-3/4 outline-none" placeholder="Updated in your index">
+        <div class="flex order-first w-full flex-col relative gap-16 md:order-last md:w-auto">
+            <form id="form" class="flex flex-1 gap-4">
+              <input id="email" type="text" class="rounded-full p-2 px-4 w-3/4 outline-none" placeholder="Updated in your index">
               <button class="py-2 px-6 text-white bg-brightRed rounded-full hover:bg-brightRedLight">Go</button>              
             </form>
+            <small id="error-message" class="text-brightRed hidden absolute top-12 left-2"></small>
           <div class="hidden md:flex">
             <p class="text-white">Copyright &copy 2022, All Rights Reserved</p>
           </div>

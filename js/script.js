@@ -4,6 +4,8 @@ const email = document.getElementById("email");
 const errMsg = document.getElementById("error-message");
 const form = document.getElementById("form");
 
+
+// Mobile nav menu toggle
 menuBtn.addEventListener("click", () => {
     const isExpanded = menu.getAttribute("aria-expanded");
     if(menu.isExpanded == "false") {
@@ -15,6 +17,7 @@ menuBtn.addEventListener("click", () => {
     }
 });
 
+//  Email submit event listener
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     checkEmail();
